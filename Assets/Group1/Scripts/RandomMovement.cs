@@ -14,7 +14,6 @@ public class RandomMovement : MonoBehaviour
         PickNextTarget();
     }
 
-
     private void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, _target, _speed * Time.deltaTime);

@@ -11,7 +11,7 @@ public class SpeedBuff : MonoBehaviour
     {
         if (collision.TryGetComponent(out Player player))
         {
-            player.ReceiveBuff(Apply(player));
+            player.StartCoroutine(Apply(player));
             Destroy(gameObject);
         }
     }
