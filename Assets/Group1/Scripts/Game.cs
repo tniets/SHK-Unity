@@ -28,6 +28,11 @@ public class Game : MonoBehaviour
         }
     }
 
+    public void End()
+    {
+        _endScreen.SetActive(true);
+    }
+
     private void OnEnemyDying(Enemy enemy)
     {
         enemy.Dying -= OnEnemyDying;
@@ -36,10 +41,5 @@ public class Game : MonoBehaviour
 
         if (_enemies.Count == 0)
             End();
-    }
-
-    public void End()
-    {
-        _endScreen.SetActive(true);
     }
 }
