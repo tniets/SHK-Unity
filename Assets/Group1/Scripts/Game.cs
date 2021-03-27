@@ -28,7 +28,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    public void End()
+    private void End()
     {
         _endScreen.SetActive(true);
     }
