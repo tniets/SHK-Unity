@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public event Action<Enemy> Dying = delegate { };
+    public event Action<Enemy> Dying;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        Dying(this);
+        Dying?.Invoke(this);
         Destroy(gameObject);
     }
 }
